@@ -1,0 +1,49 @@
+<script lang="ts">
+  import Button from '$lib/components/Button.svelte';
+  import type { ActionData } from './$types';
+  import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
+
+  export let form: ActionData
+
+  // ERROR MESSAGE
+  const errorMessage: ToastSettings = {
+    message: 'Something is wrong! We cannot get you in',
+    timeout: 2000,
+  };
+
+  if(form?.invalid){
+    toastStore.trigger(errorMessage);
+  }
+</script>
+
+<span class="text-5xl font-bold m-5">Log in</span>
+
+<!-- LOGIN FORM -->
+<form method="POST" action="?/login">
+  <div class="bg-slate-200 rounded-xl py-2 px-5 m-5 h-auto">
+    <p class="font-medium">Email</p>
+    <input 
+      name="email"
+      type="email" 
+      class="bg-slate-200 w-full" 
+      placeholder="Enter Your Email"
+      >
+  </div>
+
+  <div class="bg-slate-200 rounded-xl py-2 px-5 m-5 h-auto">
+    <p class="font-medium">Password</p>
+    <input 
+      name="password"
+      type="password" 
+      class="bg-slate-200 w-full" 
+      placeholder="Enter Your Password"
+      >
+  </div>
+  
+  <!-- SOME LINKS -->
+  <div class="m-5">
+    New here? <a href="/Form/Signup">Join now!</a>
+  </div>
+
+  <Button>Log In</Button>
+</form>

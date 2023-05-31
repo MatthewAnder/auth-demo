@@ -1,0 +1,27 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis-Regular.ttf');
+}
+
+@layer base {
+  html{
+    @apply font-dosis;
+  }
+
+  body {
+    @apply bg-surface-50-900-token;
+  }
+
+  a{
+    @apply underline text-blue-700;
+  }
+
+  input{
+    @apply outline-none;
+  }
+}
