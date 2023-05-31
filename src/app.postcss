@@ -17,11 +17,17 @@
     @apply bg-surface-50-900-token;
   }
 
+  html, body { @apply h-full overflow-hidden; }
+
   a{
     @apply underline text-blue-700;
   }
 
   input{
     @apply outline-none;
+  }
+}@layer components {
+  .sideitem-btn{
+    @apply flex text-xl font-semibold border-2 p-2 pt-1 mt-4 rounded-xl hover:bg-gray-200 hover:text-indigo-500 hover:stroke-indigo-500;
   }
 }

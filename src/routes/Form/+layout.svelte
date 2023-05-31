@@ -2,6 +2,7 @@
   import Card from '$lib/components/Card.svelte';
 
   import testImage from '$lib/images/image.svg';
+    import { redirect } from '@sveltejs/kit';
   
   import type { PageData } from './$types';
   
