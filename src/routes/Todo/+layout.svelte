@@ -21,10 +21,6 @@
     <!-- Router Slot -->
       <slot />
     <!-- ---- / ---- -->
-
-    <svelte:fragment slot="pageFooter">
-      Page Footer
-    </svelte:fragment>
   </AppShell>
 {:else}
   <div class="grid  place-items-center min-h-screen">
