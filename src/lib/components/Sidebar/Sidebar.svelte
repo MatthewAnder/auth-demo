@@ -8,7 +8,7 @@
   <ul class="p-7">  
     {#each itemData as item}
     <Sideitem href = {item.link}>
-      <Icon name = {item.icon} />
+      <Icon name = {item.name} />
       {item.name}
     </Sideitem>
     {/each}
