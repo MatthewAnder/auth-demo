@@ -3,6 +3,8 @@
   // This contains the bulk of Skeletons required styles:
   // NOTE: this will be renamed skeleton.css in the v2.x release.
   import '@skeletonlabs/skeleton/styles/skeleton.css';
+  import { storePopup } from '@skeletonlabs/skeleton';
+  import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
   import "../app.postcss";
 
   import { invalidateAll } from '$app/navigation';
@@ -25,6 +27,9 @@
 
     return () => subscription.unsubscribe();
   });
+
+  // SETTING UP FOR POP UP BUTTON
+  storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
 
 

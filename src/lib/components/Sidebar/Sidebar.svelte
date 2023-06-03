@@ -5,13 +5,20 @@
 </script>
 
 <main class="min-h-screen flex flex-col border-r-2 border-slate-300 bg-slate-100 w-96">
-  <section class="inline-grid grid-row-2 grid-flow-col ml-5 mt-5">
-    <Icon name = "Account" class="w-12 row-span-2" />
-    <span class="pl-4 text-xl font-medium">Hello, Matthew!</span>
-    <span class="px-4">"Opportunities don't happen, yo  em."</span>
-  </section>
 
-  <ul class="p-4">  
+
+  <section class="grid grid-cols-[auto_1fr_auto] mx-5 mt-5 p-1">
+    <Icon name = "Account" class="w-14 row-span-2 text-gray-300" />
+    <div class="grid grid-flow-row px-3">
+      <span class="text-2xl font-medium grid grid-cols-[auto_1fr_auto] items-center">
+        Hello, Matthew! 
+        <Icon name="Chevron" class="hover:text-black"/>
+      </span>
+      <span class="text-neutral-400 text-sm">"Opportunities don't happen, you create them."</span>
+    </div>
+  </section>
+  
+  <ul class="px-4 pb-2">  
     {#each itemData as item}
     <Sideitem href = {item.link}>
       <Icon name = {item.name} class="mx-2" />
@@ -22,7 +29,7 @@
 
   <hr class="mx-7">
 
-  <p class="px-8 py-4 text-lg font-medium">Custom List</p>
+  <p class="px-8 py-4 text-base font-semibold text-gray-400">Custom List</p>
 
   <footer class="flex px-2 mt-auto mb-3">
     <button class="w-auto mx-2 align-middle rounded-full hover:bg-slate-700 hover:text-white"><Icon name="Add" class="w-7" /></button>
