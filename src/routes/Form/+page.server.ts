@@ -32,6 +32,6 @@ export const actions: Actions = {
       })
     }
 
-    throw redirect(303, '/Todo');
+    throw redirect(303, '/Todo/Dashboard');
   }
 } satisfies Actions;
