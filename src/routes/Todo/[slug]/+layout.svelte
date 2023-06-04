@@ -6,8 +6,7 @@
   import { AppShell } from "@skeletonlabs/skeleton";
   import Sidebar from "$lib/components/Sidebar/Sidebar.svelte";
 
-  const emojis = ["🧇", "🎨", "🎍", "🎄"];
-  const randomElement = emojis[Math.floor(Math.random() * emojis.length)];
+  
   import type { LayoutData } from './$types';
 
   export let data: LayoutData; 
@@ -23,7 +22,7 @@
   </svelte:fragment>
 
   <svelte:fragment slot="pageHeader">
-    <span class="block text-4xl font-bold px-20 pt-11">{randomElement}{data.title}</span>
+    <span class="block text-4xl font-bold px-20 pt-11">{data.emoji}  {data.title}</span>
   </svelte:fragment>
 
   <!-- Router Slot -->
