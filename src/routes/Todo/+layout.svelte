@@ -9,7 +9,7 @@
   </svelte:fragment>
 
   <svelte:fragment slot="pageHeader">
-    Header
+    <span class="block text-4xl font-bold px-20 pt-11">🥪Dashboard</span>
   </svelte:fragment>
 
   <!-- Router Slot -->

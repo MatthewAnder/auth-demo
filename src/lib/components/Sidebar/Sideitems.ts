@@ -1,26 +1,26 @@
 export const itemData = [
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Dashboard'
   },
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Important'
   },
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Projects'
   },
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Flagged Email'
   },
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Tasks'
   },
   {
-    link: 'https://youtube.com',
+    link: '',
     name: 'Calender'
   },
 ]
