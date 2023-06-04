@@ -28,7 +28,7 @@
     return () => subscription.unsubscribe();
   });
 
-  // SETTING UP FOR POP UP BUTTON
+  // SETTING UP FOR POPUP BUTTON
   storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
 

@@ -23,7 +23,7 @@
   <ul class="px-4 pb-2">  
     {#each itemData as item}
     <Sideitem href = "/Todo/{item}">
-      <Icon name = {item} class="mx-2" />
+      <Icon name={item} class="mx-2" />
       {item}
     </Sideitem>
     {/each}

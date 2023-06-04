@@ -8,6 +8,8 @@
       placement: 'bottom',
       closeQuery: '.listbox-item'
     };
+
+    
 </script>
 
 <main class="mx-4">
@@ -19,11 +21,21 @@
   <div class="card rounded-lg w-20 shadow-xl py-1" data-popup="popupCombobox">
     <ul class="text-sm">
       <li>
-        <button class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105">Settings</button>
+        <button 
+          class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105"
+          on:click
+          >
+          Settings
+        </button>
       </li>
 
       <li>
-        <button class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105">Sign out</button>
+        <button 
+          class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105"
+          on:click
+          >
+          Sign out
+        </button>
       </li>
     </ul>
     <div class="arrow bg-surface-100-800-token" />

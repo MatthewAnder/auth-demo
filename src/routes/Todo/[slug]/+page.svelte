@@ -4,4 +4,7 @@
   export let data: PageData;
 </script>
 
-<div>{@html data.content}</div>
+<main class="mx-32 my-16">
+  {@html data.content}
+
+</main>
