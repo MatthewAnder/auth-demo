@@ -5,7 +5,7 @@
   import Icon from '../Icon.svelte';
   import Combobox from './Combobox.svelte';
 
-  const itemData = ['Dashboard', 'Important', 'Projects', 'Flagged Email', 'Tasks', 'Calender'];
+  const itemData = ['Dashboard', 'Important', 'Projects', 'Flagged', 'Tasks', 'Calender'];
   
   $: listboxItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-gray-200 text-indigo-500' : '');
 </script>
@@ -22,15 +22,18 @@
     </div>
   </section>
   
-  <ul class="px-4 pb-2">
-    {#each itemData as item}
-      <li class="grid grid-cols-1">
-        <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
-        <Icon name={item} class="mx-2" /> {@html item}
-        </a>
-      </li>
-    {/each}
-  </ul> 
+  <nav>
+    <ul class="px-4 pb-2">
+      {#each itemData as item}
+        <li class="grid grid-cols-1">
+          <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
+          <Icon name={item} class="mx-2" /> {item}
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
+   
 
 
   <hr class="mx-7">
