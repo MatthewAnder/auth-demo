@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.5](https://github.com/MatthewAnder/auth-demo/compare/v0.0.4...v0.0.5) (2023-06-05)
+
+
+### Features
+
+* Add page according to the sideitem that is selected ([66d08af](https://github.com/MatthewAnder/auth-demo/commit/66d08af1a476c19beb5aa7831b7c812d51e0f51a))
+* Add random emoji on the todo page header everytime on load ([2344bb7](https://github.com/MatthewAnder/auth-demo/commit/2344bb718febf5992da546ae354a5fc3192f3bba))
+* Custom page layout for each side item ([dc97b04](https://github.com/MatthewAnder/auth-demo/commit/dc97b0455abfb255cbad91c4da55cd1f80775375))
+
+
+### Bug Fixes
+
+* Redirect user to dashboard instead of the form when user has session ([12c94b6](https://github.com/MatthewAnder/auth-demo/commit/12c94b6a4f45c08ac30e307d1bc73762b070ee20))
+* Sidebar buttons will stay active when press ([0c4f98a](https://github.com/MatthewAnder/auth-demo/commit/0c4f98a8d7e3639cee05f803a0ce1ca531a24be2))
+
 ## [0.0.4](https://github.com/MatthewAnder/auth-demo/compare/v0.0.3...v0.0.4) (2023-06-04)
 
 
