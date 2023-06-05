@@ -1,4 +1,9 @@
 import type { LayoutLoad } from './$types';
+import { onMount } from 'svelte';
+
+
+
+
 
 export const load: LayoutLoad = (({ params }) => {
   const emojis = ['🎨','🍜','🚈','🎂','🧇','🥪','😮','🎅',,'🥽','⚽','🧿','🍹','🍷','🍴','🍕','🍔','🍟','🍗','🍖','🍝','🍛','🍤','🍱','🍣','🍥','🍙','🍘','🍚','🍜','🍲'];

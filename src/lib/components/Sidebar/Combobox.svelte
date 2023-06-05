@@ -8,8 +8,6 @@
       placement: 'bottom',
       closeQuery: '.listbox-item'
     };
-
-    
 </script>
 
 <main class="mx-4">
