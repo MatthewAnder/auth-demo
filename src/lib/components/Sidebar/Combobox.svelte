@@ -1,6 +1,6 @@
 <script lang="ts">
     import { type PopupSettings, popup } from "@skeletonlabs/skeleton";
-    import Icon from '../Icon.svelte';
+    import Icon from '$lib/components/Icon.svelte';
 
     const popupCombobox: PopupSettings = {
       event: 'click',
@@ -28,12 +28,7 @@
       </li>
 
       <li>
-        <button 
-          class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105"
-          on:click
-          >
-          Sign out
-        </button>
+        <slot />
       </li>
     </ul>
     <div class="arrow bg-surface-100-800-token" />

@@ -1,6 +1,6 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-
+import { AuthApiError } from '@supabase/supabase-js';
 
 export const actions: Actions = {
   register: async ({ request, locals}) => {
@@ -10,7 +10,7 @@ export const actions: Actions = {
       password = formData.get('password') as string,
       confirmPassword = formData.get('confirmPassword') as string;
 
-    if (confirmPassword !== password || !email || !password) {
+    if (confirmPassword !== password) {
 			return fail(400, { email, incorrect: true });
 		}
 
@@ -19,6 +19,23 @@ export const actions: Actions = {
       email,
       password
     })
+
+    if (error) {
+      if (error instanceof AuthApiError && error.status === 400) {
+        return fail(400, {
+          incorrect: true,
+          values: {
+            email,
+          },
+        })
+      }
+      return fail(500, {
+        error: 'Server error. Try again later.',
+        values: {
+          email,
+        },
+      })
+    }
 
     throw redirect(303, '/Verify');
   }

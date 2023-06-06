@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
 
   import { Avatar } from '@skeletonlabs/skeleton';
-  import Icon from '../Icon.svelte';
+  import Icon from '$lib/components/Icon.svelte';
   import Combobox from './Combobox.svelte';
 
   const itemData = ['Dashboard', 'Important', 'Projects', 'Flagged', 'Tasks', 'Calender'];
@@ -16,7 +16,7 @@
     <Avatar background="bg-primary-100" />
     <div class="grid grid-flow-row px-3">
       <span class="text-2xl font-medium grid grid-cols-[auto_1fr_auto] items-center">
-        Hello, Matthew! <Combobox />
+        Hello, Matthew! <Combobox><slot /></Combobox>
       </span>
       <span class="text-neutral-400 text-sm">"Opportunities don't happen, you create them."</span>
     </div>
@@ -24,13 +24,13 @@
   
   <nav>
     <ul class="px-4 pb-2">
-      {#each itemData as item}
-        <li class="grid grid-cols-1">
-          <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
-          <Icon name={item} class="mx-2" /> {item}
-          </a>
-        </li>
-      {/each}
+    {#each itemData as item}
+      <li class="grid grid-cols-1">
+        <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
+        <Icon name={item} class="mx-2" /> {item}
+        </a>
+      </li>
+    {/each}
     </ul>
   </nav>
    

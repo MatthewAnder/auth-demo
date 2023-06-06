@@ -1,11 +1,28 @@
 <script lang="ts">
   import { AppShell } from "@skeletonlabs/skeleton";
   import Sidebar from "$lib/components/Sidebar/Sidebar.svelte";
+  import type { LayoutData } from "./$types";
+
+  export let data: LayoutData;
+  $: ({ supabase } = data);
+
+  async function signout() {
+    const { error } = await supabase.auth.signOut();
+  }
 </script>
 
 <AppShell>
   <svelte:fragment slot="sidebarLeft">
-    <Sidebar />
+    <Sidebar>
+      <!-- <NOT SURE IF THIS IS THE RIGHT WAY BUT SURELY THERE SHOULD BE A BETTER WAY> -->
+      <button 
+        class="w-full my-1 py-1 hover:bg-sky-950 hover:text-slate-100 active:scale-105"
+        on:click={signout}  
+        >
+        Sign out
+      </button>
+      <!-- ---- / ---- -->
+    </Sidebar>
   </svelte:fragment>
 
   <!-- Router Slot -->
