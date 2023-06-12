@@ -24,7 +24,6 @@ export const actions: Actions = {
       password
     })
 
-
-    throw redirect(303, '/Verify');
+    throw redirect (303, ('/Verify'));
   }
 } satisfies Actions;  

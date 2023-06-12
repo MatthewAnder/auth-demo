@@ -6,7 +6,7 @@
 
 
 <div class="grid grid-cols-1 lg:grid-cols-2 place-items-center min-h-screen">
-  <img class="hidden lg:inline-block" src={testImage} alt="graphics">
+  <img class="hidden lg:inline-block fill-slate-300" src={testImage} alt="graphics">
 
   <Card>
     <slot />
