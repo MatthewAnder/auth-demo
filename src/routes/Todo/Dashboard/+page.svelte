@@ -6,11 +6,10 @@
     const settings: PagesShellSettings = {
         emoji:'🥪',
         name:'Dashboard',
-        description:'lalalal'
     }
 </script>
 
 <PageShell {settings}>
-
+    
 </PageShell>
 

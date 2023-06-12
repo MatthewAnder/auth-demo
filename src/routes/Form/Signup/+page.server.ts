@@ -9,33 +9,21 @@ export const actions: Actions = {
     const email = formData.get('email') as string,
       password = formData.get('password') as string,
       confirmPassword = formData.get('confirmPassword') as string;
-
-    if (confirmPassword !== password) {
-			return fail(400, { email, incorrect: true });
-		}
-
+    
+    if (email === " " && confirmPassword !== password) {
+      return fail(400, {
+        incorrect: true,
+        values: {
+          email,
+        },
+      });
+    }
 
     const { error } = await locals.supabase.auth.signUp({
       email,
       password
     })
 
-    if (error) {
-      if (error instanceof AuthApiError && error.status === 400) {
-        return fail(400, {
-          incorrect: true,
-          values: {
-            email,
-          },
-        })
-      }
-      return fail(500, {
-        error: 'Server error. Try again later.',
-        values: {
-          email,
-        },
-      })
-    }
 
     throw redirect(303, '/Verify');
   }

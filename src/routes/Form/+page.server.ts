@@ -22,14 +22,14 @@ export const actions: Actions = {
           values: {
             email,
           },
-        })
+        });
       }
       return fail(500, {
         error: 'Server error. Try again later.',
         values: {
           email,
         },
-      })
+      });
     }
 
     throw redirect(303, '/Todo/Dashboard');

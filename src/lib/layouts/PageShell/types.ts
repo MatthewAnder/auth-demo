@@ -3,6 +3,4 @@ export interface PagesShellSettings {
 	emoji: string;
   /** The feature name. */
 	name: string;
-	/** The feature description */
-	description: string;
 }

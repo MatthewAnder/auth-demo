@@ -20,22 +20,22 @@
 
 <!-- LOGIN FORM -->
 <form method="POST" action="?/login">
-  <div class="bg-slate-200 rounded-xl py-2 px-5 m-5 h-auto">
+  <div class="form-textbox">
     <p class="font-medium">Email</p>
     <input 
       name="email"
       type="email" 
-      class="bg-slate-200 w-full" 
+      class="bg-inherit w-full" 
       placeholder="Enter Your Email"
       >
   </div>
 
-  <div class="bg-slate-200 rounded-xl py-2 px-5 m-5 h-auto">
+  <div class="form-textbox">
     <p class="font-medium">Password</p>
     <input 
       name="password"
       type="password" 
-      class="bg-slate-200 w-full" 
+      class="bg-inherit w-full" 
       placeholder="Enter Your Password"
       >
   </div>

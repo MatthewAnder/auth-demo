@@ -6,7 +6,6 @@
     const settings: PagesShellSettings = {
         emoji:'💻',
         name:'Tasks',
-        description:'lalalal'
     }
 </script>
 

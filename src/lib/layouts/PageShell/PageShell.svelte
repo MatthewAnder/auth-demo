@@ -14,6 +14,7 @@
   }
 </script>
 
-<main>
-  <span class="block text-4xl font-bold px-20 pt-11">{pageData.emoji} {pageData.name}</span>
+<main class="mx-28 mt-16">
+  <span class="text-4xl font-bold">{pageData.emoji} {pageData.name}</span>
+  <slot />
 </main>

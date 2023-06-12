@@ -6,7 +6,6 @@
     const settings: PagesShellSettings = {
         emoji:'🤑',
         name:'Flagged Email',
-        description:'lalalal'
     }
 </script>
 

@@ -6,10 +6,9 @@
     const settings: PagesShellSettings = {
         emoji:'📅',
         name:'Calender',
-        description:'lalalal'
     }
 </script>
 
 <PageShell {settings}>
-
+    
 </PageShell>
