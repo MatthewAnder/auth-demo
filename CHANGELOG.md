@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/MatthewAnder/auth-demo/compare/v0.0.5...v0.0.6) (2023-06-12)
+
+
+### Features
+
+* Add a functionality to the signout button in the sidebar ([713f8b4](https://github.com/MatthewAnder/auth-demo/commit/713f8b4a470bae5e135c95f36a662d213c4aa330))
+* Change the theme to vintage and dark mode with some changes to the form ([2ef6974](https://github.com/MatthewAnder/auth-demo/commit/2ef6974dcbada3c46ed90b3ffaa793b345da8bac))
+
+
+### Bug Fixes
+
+* Turn off the autocomplete in the forms for security and aesthetics ([1e09ac2](https://github.com/MatthewAnder/auth-demo/commit/1e09ac22c286b6e721ec1f26357302eaea308c6a))
+
 ## [0.0.5](https://github.com/MatthewAnder/auth-demo/compare/v0.0.4...v0.0.5) (2023-06-05)
 
 
