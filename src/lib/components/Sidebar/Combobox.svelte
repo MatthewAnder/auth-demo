@@ -16,11 +16,11 @@
   </button>
   
   
-  <div class="card rounded-lg w-20 shadow-xl py-1 bg-slate-100" data-popup="popupCombobox">
-    <ul class="text-sm">
+  <div class="card rounded-lg w-20 shadow-xl py-1 variant-filled-secondary" data-popup="popupCombobox">
+    <ul class="text-sm ">
       <li>
         <button 
-          class="w-full my-1 py-1 hover:bg-primary-900 hover:text-slate-100 active:scale-105"
+          class="w-full my-1 py-1 hover:bg-secondary-400 active:scale-105 active:rounded-full duration-75"
           on:click
           >
           Settings
@@ -31,7 +31,7 @@
         <slot />
       </li>
     </ul>
-    <div class="arrow bg-surface-800-100-token" />
+    <div class="arrow variant-filled-secondary" />
   </div>
 
 </main>
