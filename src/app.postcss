@@ -14,7 +14,14 @@
   }
 
   body {
-    @apply bg-surface-50-900-token;
+    background-color:hsla(20,11%,10%,1);
+    background-image:
+    radial-gradient(at 94% 96%, hsla(25,100%,19%,0.57) 0px, transparent 50%),
+    radial-gradient(at 60% 1%, hsla(359,96%,62%,0.2) 0px, transparent 50%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   html, body { @apply h-full overflow-hidden; }
@@ -28,10 +35,10 @@
   }
 }@layer components {
   .sideitem-btn{
-    @apply flex text-xl font-semibold px-2 py-3 my-1 rounded-xl hover:bg-gray-200 hover:text-indigo-500 text-surface-700 no-underline;
+    @apply flex text-xl font-semibold px-2 py-3 my-1 rounded-xl hover:bg-primary-500 focus:scale-95 duration-75 hover:text-surface-700 text-surface-300 no-underline;
   }
 
   .form-textbox{
-    @apply bg-surface-500 rounded-xl py-2 px-5 m-5 h-auto focus-within:bg-surface-600 outline outline-0 outline-secondary-600 focus-within:outline-2 duration-75;
+    @apply bg-surface-500 rounded-xl py-2 px-5 m-5 h-auto focus-within:bg-surface-600 outline outline-0 outline-tertiary-400 focus-within:outline-4 duration-75;
   }
 }

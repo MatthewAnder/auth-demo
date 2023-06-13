@@ -7,13 +7,13 @@
 
   const itemData = ['Dashboard', 'Important', 'Projects', 'Flagged', 'Tasks', 'Calender'];
   
-  $: listboxItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-gray-200 text-indigo-500' : '');
+  $: listboxItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-primary-500 text-surface-700' : '');
 </script>
 
-<main class="min-h-screen flex flex-col border-r-2 border-slate-300 bg-slate-100 w-96">
+<main class="min-h-screen flex flex-col bg-surface-100-800-token w-96">
 
   <section class="grid grid-cols-[auto_1fr_auto] mx-5 mt-5 p-1">
-    <Avatar background="bg-primary-100" />
+    <Avatar background="bg-primary-500" initials="MA" />
     <div class="grid grid-flow-row px-3">
       <span class="text-2xl font-medium grid grid-cols-[auto_1fr_auto] items-center">
         Hello, Matthew! <Combobox><slot /></Combobox>
@@ -23,7 +23,7 @@
   </section>
   
   <nav>
-    <ul class="px-4 pb-2">
+    <ul class="mx-4 my-3">
     {#each itemData as item}
       <li class="grid grid-cols-1">
         <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
