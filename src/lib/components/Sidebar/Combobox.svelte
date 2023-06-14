@@ -1,6 +1,5 @@
 <script lang="ts">
     import { type PopupSettings, popup } from "@skeletonlabs/skeleton";
-    import Icon from '$lib/components/Icon.svelte';
 
     const popupCombobox: PopupSettings = {
       event: 'click',
@@ -10,9 +9,9 @@
     };
 </script>
 
-<main class="mx-4">
-  <button class="w-4 rounded-full scale-150" use:popup={popupCombobox}>
-    <Icon name="Chevron" class="w-4 hover:scale-110 hover:bg-secondary-700 active:scale-100 duration-100 rounded-full" />
+<main class="mx-2">
+  <button class="rounded-full scale-75" use:popup={popupCombobox}>
+    <i class="fa-solid fa-chevron-down rounded-full p-1 hover:scale-110 hover:bg-secondary-500 hover:text-white active:scale-100 duration-100"></i>
   </button>
   
   

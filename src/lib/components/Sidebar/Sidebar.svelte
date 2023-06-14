@@ -1,11 +1,10 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { itemData } from './SideItems';
 
   import { Avatar } from '@skeletonlabs/skeleton';
-  import Icon from '$lib/components/Icon.svelte';
-  import Combobox from './Combobox.svelte';
+  import Combobox from '$lib/components/Sidebar/Combobox.svelte';
 
-  const itemData = ['Dashboard', 'Important', 'Projects', 'Flagged', 'Tasks', 'Calender'];
   let userName: string = 'matthewanh@hotmail.com'
   
   $: listboxItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-primary-500 text-surface-700' : '');
@@ -27,23 +26,28 @@
     <ul class="mx-4 my-3">
     {#each itemData as item}
       <li class="grid grid-cols-1">
-        <a class="sideitem-btn {listboxItemActive(item)}" href="/Todo/{item}">
-        <Icon name={item} class="mx-2" /> {item}
+        <a class="sideitem-btn {listboxItemActive(item.name)}" href="/Todo/{item.name}">
+        <i class="{item.icon} scale-125 pt-1 ml-3 mr-4"></i> {item.name=="Flagged" ? "Flagged Email" : item.name}
         </a>
       </li>
     {/each}
     </ul>
   </nav>
-   
-
 
   <hr class="mx-7">
   <p class="px-8 py-4 text-base font-semibold text-gray-400">Custom List</p>
 
 
   <footer class="flex px-2 mt-auto mb-3">
-    <button class="w-auto mx-2 align-middle rounded-full hover:bg-slate-700 hover:text-white"><Icon name="Add" class="w-7" /></button>
-    <input class="bg-slate-100 w-full mr-2 text-xl" type="text" placeholder="Add List" name="" id="">
+    <button class="w-auto mx-3 align-middle scale-150">
+      <i class="fa-solid fa-square-plus"></i>
+    </button>
+    <input 
+      class="bg-inherit w-full mx-3 text-xl" 
+      type="text" 
+      placeholder="Add List" 
+      maxlength="20"
+      >
   </footer>
 </main>
 
