@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.7](https://github.com/MatthewAnder/auth-demo/compare/v0.0.6...v0.0.7) (2023-06-14)
+
+
+### Features
+
+* Update to the background and sidebar colors ([315dbe2](https://github.com/MatthewAnder/auth-demo/commit/315dbe2d3756ae0d69799360bfed6bb84985d923))
+
+
+### Bug Fixes
+
+* Fix the combobox colors to fit the theme better ([0963cb9](https://github.com/MatthewAnder/auth-demo/commit/0963cb90640daf81e069d9d7eb340d2000f2918f))
+* New form image to better fit the theme ([fe36724](https://github.com/MatthewAnder/auth-demo/commit/fe367243aef42b27c54c8153ff1108e2639626fc))
+
 ## [0.0.6](https://github.com/MatthewAnder/auth-demo/compare/v0.0.5...v0.0.6) (2023-06-12)
 
 
