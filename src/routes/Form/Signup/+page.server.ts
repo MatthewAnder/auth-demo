@@ -1,6 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import { AuthApiError } from '@supabase/supabase-js';
 
 export const actions: Actions = {
   register: async ({ request, locals}) => {
@@ -8,7 +7,7 @@ export const actions: Actions = {
 
     const email = formData.get('email') as string,
       password = formData.get('password') as string,
-      confirmPassword = formData.get('confirmPassword') as string;
+      confirmPassword = formData.get('confirmpassword') as string;
     
     if (email === " " && confirmPassword !== password) {
       return fail(400, {

@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
   import Divider from '$lib/components/Divider.svelte';
+  import Textbox from '$lib/components/Textbox.svelte';
   import type { ActionData } from './$types';
   import { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
@@ -22,26 +23,8 @@
 
   <!-- LOGIN FORM -->
   <form method="POST" action="?/login">
-    <div class="form-textbox">
-      <p class="font-medium autofill:focus-visible:bg-yellow-500">Email</p>
-      <input 
-        name="email"
-        type="email" 
-        class="bg-inherit w-full " 
-        placeholder="Enter Your Email"
-        autocomplete="off"
-        >
-    </div>
-  
-    <div class="form-textbox">
-      <p class="font-medium">Password</p>
-      <input 
-        name="password"
-        type="password" 
-        class="bg-inherit w-full" 
-        placeholder="Enter Your Password"
-        >
-    </div>
+    <Textbox placeholder="Enter Your Email" label="Email"/>
+    <Textbox placeholder="Enter Your Password" label="Password" />
     
     <!-- SOME LINKS -->
     <div class="m-5">
