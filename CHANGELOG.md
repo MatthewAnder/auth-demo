@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/MatthewAnder/auth-demo/compare/v0.0.7...v0.0.8) (2023-06-14)
+
+
+### Features
+
+* Add font awesome for icons ([a7e26d0](https://github.com/MatthewAnder/auth-demo/commit/a7e26d0047da5dc35d933c6d1e09d564a2903f3d))
+
+
+### Bug Fixes
+
+* Change the icon to font awesome from the manual Icon.svelte ([a545e2e](https://github.com/MatthewAnder/auth-demo/commit/a545e2e8a1cd6cdb0ca2db6e253e30f77dd27868))
+* Turn the textbox auth form into a component for reusability and efficiency ([62239f5](https://github.com/MatthewAnder/auth-demo/commit/62239f5777c46e4694d905d9fb0c35d23c824628))
+
 ## [0.0.7](https://github.com/MatthewAnder/auth-demo/compare/v0.0.6...v0.0.7) (2023-06-14)
 
 
