@@ -10,5 +10,7 @@
 </script>
 
 <PageShell {settings}>
-
+    <section>
+        <input type="text" placeholder="Add Task">
+    </section>
 </PageShell>

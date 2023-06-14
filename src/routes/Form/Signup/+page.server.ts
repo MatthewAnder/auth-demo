@@ -11,9 +11,9 @@ export const actions: Actions = {
     
     if (email === " " && confirmPassword !== password) {
       return fail(400, {
-        incorrect: true,
         values: {
           email,
+          incorrect: true,
         },
       });
     }

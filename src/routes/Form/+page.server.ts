@@ -1,6 +1,7 @@
 import { fail, redirect } from '@sveltejs/kit';
 import { AuthApiError } from '@supabase/supabase-js'
 import type { Actions } from './$types'
+import { stringify } from 'postcss';
 
 export const actions: Actions = {
   login: async({ request, locals }) => {
@@ -18,15 +19,16 @@ export const actions: Actions = {
     if (error) {
       if (error instanceof AuthApiError && error.status === 400) {
         return fail(400, {
-          invalid: true,
           values: {
             email,
+            invalid: true,
           },
         });
       }
       return fail(500, {
-        error: 'Server error. Try again later.',
         values: {
+          error: 'Server error. Try again later.',
+          invalid: true,
           email,
         },
       });

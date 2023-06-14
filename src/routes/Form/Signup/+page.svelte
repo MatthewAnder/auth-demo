@@ -1,7 +1,7 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
-  import Divider from '$lib/components/Divider.svelte';
-  import Textbox from '$lib/components/Textbox.svelte';
+  import Divider from '$lib/components/Form/Divider.svelte';
+  import Textbox from '$lib/components/Form/Textbox.svelte';
   import type { ActionData } from './$types';
   import  { toastStore, type ToastSettings } from '@skeletonlabs/skeleton';
 
@@ -13,7 +13,7 @@
     timeout: 2000,
   };
 
-  if(form?.incorrect){
+  if(form?.values.incorrect){
     toastStore.trigger(errorMessage);
   }
 
@@ -22,9 +22,9 @@
 <span class="text-5xl font-bold m-5">Register</span>
 <!-- REGISTER FORM -->
 <form method="POST" action="?/register">
-  <Textbox placeholder="Enter Your Email" label="Email"/>
-  <Textbox placeholder="Enter Your Password" label="Password" />
-  <Textbox placeholder="Confirm It!" label="Confirm Password" />
+  <Textbox placeholder="Enter Your Email" label="Email" value={form?.values.email ?? ''}/>
+  <Textbox placeholder="Enter Your Password" label="Password" value=""/>
+  <Textbox placeholder="Confirm It!" label="Confirm Password" value=""/>
 
   <!-- SOME LINKS -->
   <div class="mx-5">
@@ -34,4 +34,5 @@
   <Button btnName="Register" />
 
   <Divider />
+  <i class="fa-solid fa-house"></i>
 </form>
