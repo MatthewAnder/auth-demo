@@ -48,7 +48,7 @@
       New here? <a href="/Form/Signup">Join now!</a>
     </div>
   
-    <Button>Log In</Button>
+    <Button btnName="Log In" />
     <Divider />
   </form>
 </main>

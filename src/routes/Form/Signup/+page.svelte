@@ -15,6 +15,7 @@
   if(form?.incorrect){
     toastStore.trigger(errorMessage);
   }
+
 </script>
 
 <span class="text-5xl font-bold m-5">Register</span>
@@ -56,7 +57,7 @@
     Have an account? <a href="/Form">Log in now!</a>
   </div>
 
-  <Button>Register</Button>
+  <Button btnName="Register" />
 
   <Divider />
 </form>
