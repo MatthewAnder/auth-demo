@@ -9,7 +9,7 @@
 
   // ERROR MESSAGE
   const errorMessage: ToastSettings = {
-    message: 'Something is wrong! We cannot get you in',
+    message: form?.values.error as string,
     timeout: 2000,
   }
 

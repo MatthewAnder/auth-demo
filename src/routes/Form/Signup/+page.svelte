@@ -9,7 +9,7 @@
 
   //  ERROR MESSAGES
   const errorMessage: ToastSettings = {
-    message: 'Incorrect credentials! Please try again',
+    message: form?.values.error as string,
     timeout: 2000,
   };
 
@@ -22,6 +22,7 @@
 <span class="text-5xl font-bold m-5">Register</span>
 <!-- REGISTER FORM -->
 <form method="POST" action="?/register">
+  <Textbox placeholder="Enter Your Name" label="Name" value={form?.values.name ?? ''}/>
   <Textbox placeholder="Enter Your Email" label="Email" value={form?.values.email ?? ''}/>
   <Textbox placeholder="Enter Your Password" label="Password" value=""/>
   <Textbox placeholder="Confirm It!" label="Confirm Password" value=""/>
