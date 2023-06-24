@@ -15,6 +15,10 @@ export const actions: Actions = {
       email,
       password
     });
+    
+    const { data: profile } = await locals.supabase
+      .from('profiles')
+      .select('id, name')
 
     if (error) {
       if (error instanceof AuthApiError && error.status === 400) {

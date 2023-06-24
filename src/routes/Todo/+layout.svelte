@@ -10,8 +10,19 @@
   async function signout() {
     const { error } = await supabase.auth.signOut();
   }
-  console.log(session?.user);
-  let email: any = session?.user.email;
+  
+  $: if(session){
+    getUserData();
+  }
+
+  let email: string;
+  async function getUserData() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
+    email = user?.user_metadata.name
+  }
+  
 </script>
 
 <AppShell>

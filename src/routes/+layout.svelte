@@ -25,6 +25,8 @@
       }
     });
 
+    console.log(data);
+
     return () => subscription.unsubscribe();
   });
 

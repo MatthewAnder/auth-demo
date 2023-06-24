@@ -5,8 +5,8 @@
   import { Avatar } from '@skeletonlabs/skeleton';
   import Combobox from '$lib/components/Sidebar/Combobox.svelte';
 
-  export let email: any;
-  let username: string = `${email}`;
+  export let email: string;
+  let username: string = email;
   
   $: listboxItemActive = (href: string) => ($page.url.pathname?.includes(href) ? 'bg-primary-500 text-surface-700' : '');
 </script>
