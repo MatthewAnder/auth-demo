@@ -1,5 +1,8 @@
 <script lang="ts">
-    import { type PopupSettings, popup } from "@skeletonlabs/skeleton";
+    import { type PopupSettings, popup } from '@skeletonlabs/skeleton';
+    import { createEventDispatcher } from 'svelte';
+    
+    const dispatch = createEventDispatcher();
 
     const popupCombobox: PopupSettings = {
       event: 'click',
@@ -27,7 +30,12 @@
       </li>
 
       <li>
-        <slot />
+        <button 
+          class="w-full my-1 py-1 hover:bg-secondary-400 active:scale-105 active:rounded-full duration-75"
+          on:click={() => dispatch("quit", "true")}  
+          >
+          Sign out
+        </button>
       </li>
     </ul>
     <div class="arrow variant-filled-secondary" />

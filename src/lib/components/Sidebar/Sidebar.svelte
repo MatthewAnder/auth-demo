@@ -16,7 +16,7 @@
     <Avatar background="bg-primary-500" initials={userName.slice(0, 2)} />
     <div class="grid grid-flow-row px-3">
       <span class="text-2xl font-medium grid grid-cols-[auto_1fr_auto] items-center">
-        Hello, {userName.slice(0, 9)}! <Combobox><slot /></Combobox>
+        Hello, {userName.slice(0, 9)}! <Combobox on:quit />
       </span>
       <span class="text-neutral-400 text-sm">"Opportunities don't happen, you create them."</span>
     </div>

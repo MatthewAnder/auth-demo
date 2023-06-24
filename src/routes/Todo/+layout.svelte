@@ -13,16 +13,7 @@
 
 <AppShell>
   <svelte:fragment slot="sidebarLeft">
-    <Sidebar>
-      <!-- <NOT SURE IF THIS IS THE RIGHT WAY BUT SURELY THERE SHOULD BE A BETTER WAY> -->
-      <button 
-        class="w-full my-1 py-1 hover:bg-secondary-400 active:scale-105 active:rounded-full duration-75"
-        on:click={signout}  
-        >
-        Sign out
-      </button>
-      <!-- ---- / ---- -->
-    </Sidebar>
+    <Sidebar on:quit={signout} />
   </svelte:fragment>
 
   <!-- Router Slot -->
