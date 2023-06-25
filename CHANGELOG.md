@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/MatthewAnder/auth-demo/compare/v0.0.8...v0.0.9) (2023-06-25)
+
+
+### Features
+
+* Migrate to Svelte 4 ([71a7d22](https://github.com/MatthewAnder/auth-demo/commit/71a7d220bfbc5e04326ccd9ab24ae10801642309))
+* New metadata for user that automatically connect to sidebar name ([2f1b702](https://github.com/MatthewAnder/auth-demo/commit/2f1b7028d5adb447fee388cd6836d43cfeb19030))
+
+
+### Bug Fixes
+
+* Does not redirect user to verify when there is an error in the form ([3b5fa22](https://github.com/MatthewAnder/auth-demo/commit/3b5fa22ce86922eaef277e7f1fe95e8f1ab52341))
+
 ## [0.0.8](https://github.com/MatthewAnder/auth-demo/compare/v0.0.7...v0.0.8) (2023-06-14)
 
 
